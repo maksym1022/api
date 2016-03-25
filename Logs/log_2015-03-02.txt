@@ -1,0 +1,7 @@
+2015-03-02 4:27:17 - ERROR --> Duplicate entry '3-10' for key 'userID'
+2015-03-02 4:27:20 - ERROR --> Duplicate entry '3-10' for key 'userID'
+2015-03-02 4:28:39 - ERROR --> Duplicate entry '4-12' for key 'userID'
+2015-03-02 7:55:18 - ERROR --> Duplicate entry '4-13' for key 'userID'
+2015-03-02 7:55:29 - ERROR --> Duplicate entry '4-13' for key 'userID'
+2015-03-02 7:55:30 - ERROR --> Duplicate entry '4-13' for key 'userID'
+2015-03-02 7:55:31 - ERROR --> Duplicate entry '4-13' for key 'userID'

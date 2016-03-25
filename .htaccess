@@ -1,0 +1,31 @@
+# Apache needs to let you override this (AllowOverride Indexes or AllowOverride All)
+DirectoryIndex index.php
+<IfModule mod_rewrite.c>
+	RewriteEngine on
+	RewriteRule ^([^/\.]+)/?$ index.php?method=$1 [L,QSA]
+	RewriteRule ^([^/\.]+)/([^/\.]+)/?$ index.php?method=$1&id=$2 [L,QSA]
+</IfModule>
+<Files config.php>
+order allow,deny
+deny from all
+</Files>
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+IndexIgnore .htaccess
+IndexIgnore *.php
+
+<IfModule mod_deflate.c>
+SetOutputFilter DEFLATE
+
+# Don’t compress
+SetEnvIfNoCase Request_URI \.(?:gif|jpe?g|png)$ no-gzip dont-vary
+SetEnvIfNoCase Request_URI \.(?:exe|t?gz|zip|bz2|sit|rar)$ no-gzip dont-vary
+
+#Dealing with proxy servers
+<IfModule mod_headers.c>
+Header append Vary User-Agent
+</IfModule>
+
+</IfModule> 
